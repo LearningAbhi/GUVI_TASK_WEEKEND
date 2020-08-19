@@ -1,0 +1,32 @@
+#heading-span
+{
+    color:red;
+}
+
+table
+{  
+
+   border : 0px solid red;
+    width: 70%;
+    background-color: aliceblue;
+    border-collapse: collapse;
+}
+td {
+    width:50%
+}
+.table-row
+{
+    background-color:#303E47
+}
+.orange-cell
+{
+background-color: #FF9E1B
+}
+.blue-cell
+{
+    background-color: #01B1E3
+}
+.red-cell
+{
+    background-color : #FF5959
+}
