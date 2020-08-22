@@ -1,32 +1,52 @@
-#heading-span
-{
-    color:red;
-}
 
 table
 {  
 
    border : 0px solid red;
-    width: 70%;
+    
+   width: 50%;
     background-color: aliceblue;
     border-collapse: collapse;
 }
-td {
-    width:50%
+
+td{
+    width: 50%;
 }
+
+#heading-icon
+{
+        background-color: #01B1E3;
+        border: 2px solid black;
+        height: 35px;
+        border-radius:60%;
+        width: 35px;
+
+}
+
+
 .table-row
 {
     background-color:#303E47
 }
 .orange-cell
 {
-background-color: #FF9E1B
+background-color: #FF9E1B;
+padding:10px
 }
 .blue-cell
 {
-    background-color: #01B1E3
+    background-color: #01B1E3;
+    padding:10px;
 }
 .red-cell
 {
-    background-color : #FF5959
+    background-color : #FF5959;
+    padding:15px;
+}
+a
+{
+    color:white
+}
+div{
+    color: white;
 }
