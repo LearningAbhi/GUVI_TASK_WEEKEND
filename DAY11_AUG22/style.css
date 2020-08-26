@@ -1,0 +1,299 @@
+@font-face{
+    src: url(Fonts/Rathouly\ -\ Personal\ Use.otf);
+    font-family: Rat;
+}
+@font-face{
+    src: url(Fonts/Melinda\ script.ttf);
+    font-family: Mel;
+}
+@font-face{
+    src: url(Fonts/Dreamland.otf);
+    font-family: Dream;
+}
+@font-face{
+    src: url(Fonts/exmouth_.ttf);
+    font-family: Ext;
+}
+span{
+    font-family: 'Mel', serif;
+    font-size: 100px;
+
+}
+.container
+{
+    border-radius: 10%;
+    border:2px;
+    border-color: #DADCDD;
+    border-style: dotted;
+    padding: 20px;
+    margin-bottom:50px;
+}
+body
+{
+    padding-top: 50px;
+    padding-left:15%;
+    padding-right:15%;
+}
+.panel
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: opacity(5px);
+    padding-left:15%;
+    padding-right:15%;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    height: auto;
+    position: relative;
+    transform: skewY(-4deg);
+      /* Add the blur effect 
+  filter: blur(8px);
+  -webkit-filter: blur(8px);*/   
+ 
+}
+/* CSS FOR 1ST PANEL*/
+#panel-1
+{
+    padding-left:15%;
+    padding-right:15%;
+    padding-top: 20px;
+    padding-bottom:60px;
+    color:white;
+    background-color:  #1F1527;
+    transform: skewY(0deg)
+     
+}
+#panel-1-2
+{
+    margin-left: 43%;
+    width : 2%;
+    padding: 5px;
+}
+/* CSS FOR 2ND PANEL*/
+#panel-2
+{
+   background-image: url(Images/Panel-2-bg.png);
+   height:450px;
+   color:#1F1527;
+}
+#panel-2-2
+{
+  
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-left: 19%;
+    color: black;
+
+}
+#panel-2-3
+{
+    font-size: 20px;
+     margin-left: 19%;
+     margin-top:10px;
+     width: 450px;
+     text-align: justify
+}
+/*CSS FOR PANEL 3*/
+#panel-3
+{
+    background-image: url(Images/Panel-3-bg.png);
+    color:aliceblue;
+    
+
+}
+#panel-3-2
+{
+  
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-left: 16.5%;
+    color:oldlace;
+}
+/*CSS FOR PANEL 4*/
+#panel-4
+{
+    background-image:url(Images/Panel-4-bg.png); 
+    background-blend-mode: color-dodge;
+}
+#panel-4-1
+{
+    
+    margin-top:60px;
+}
+#panel-4-2
+{
+  
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 14%;
+    color:rgb(19, 18, 17);
+    width: 400PX;
+    text-align: justify;
+
+}
+
+/*CSS FOR PANEL 5*/
+#panel-5-3
+{
+    font-size: 15px;
+     margin-left: 200px;
+     margin-top: 15px;
+    width:300px
+}
+
+/*CSS FOR PANEL 6*/
+#panel-6
+{
+background-image:url(Images/Panel-6-bg.png);
+background-blend-mode: color-dodge;
+padding-top:60px;
+}
+#panel-6-2
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 30%;
+    color:cornsilk;
+    width: 380PX;
+    text-align: justify;
+}
+/*CSS FOR PANEL 7*/
+#panel-7
+{
+background-image:url(Images/Panel-7-bg.png);
+background-blend-mode: color-dodge;
+padding-top:60px;
+color:#EEAABE;
+filter: grayscale(50%);
+font-family:'Times New Roman', Times, serif;
+letter-spacing:2px;
+font-size: 30px;
+text-align: justify
+
+}
+#span-7-1 
+{
+    color: aliceblue;
+    font-family:inherit;
+    font-size: 22px;
+    text-align: inherit;
+    
+}
+#panel-7-2
+{
+    padding-top: 20px;
+    margin-top:25px;
+    color:inherit;
+    font-size:20px;
+    margin-left:30%;
+    letter-spacing: 0px;
+}
+#panel-7-3
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-left: 30%;
+    color:#EEAABE;
+    width: 380PX;
+    text-align: justify;
+    letter-spacing: 0px;
+}
+
+/*CSS FOR PANEL 8*/
+#panel-8
+{
+background-image:url(Images/Panel-8-bg.png);
+background-blend-mode: color-dodge;
+padding-top:60px;
+color : #1F1527;
+filter: grayscale(50%);
+font-family:'Times New Roman', Times, serif;
+letter-spacing:2px;
+font-size: 33px;
+text-align: justify
+
+}
+#panel-8-2
+{
+   margin-left:13%;
+    text-align: inherit;
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+/*CSS FOR PANEL 9*/
+#panel-9
+{
+background-image:url(Images/Panel-9-bg.png);
+background-blend-mode: color-dodge;
+padding-top:60px;
+color : #1F1527;
+filter: grayscale(50%);
+font-family:'Times New Roman', Times, serif;
+letter-spacing:3px;
+font-size: 35 px;
+text-align: justify
+
+}
+#panel-9-1
+{
+    margin-left:20%;
+    font-size: inherit;
+    
+}
+#panel-9-2
+{
+    margin-left:36%;
+    font-size: 15px;
+    text-align: justify;
+}
+
+/*CSS FOR PANEL 10*/
+#panel-10
+{
+color: black;
+background-blend-mode: color-dodge;
+padding-top:60px;
+background-color : #DADCDD;
+filter: grayscale(50%);
+font-family:'Times New Roman', Times, serif;
+font-size: 20 px;
+
+background-size: contain;
+background-repeat: no-repeat;
+background-size: 100%;
+filter: opacity(5px);
+    padding-left:60px;
+    padding-right:60px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    height: auto;
+    position: relative;
+
+  
+
+
+}
+
+#tab10-tr1-td1
+{
+    width:75%;
+    font-size:22px;
+    padding-right:100px;
+    text-align: justify;
+    font-weight: bold;
+    color: #929497;
+}
+
+
+#tab10-tr1-td2
+{
+    width:auto;
+   font-size: 15px;
+    text-align: right;
+    vertical-align: top;
+}
