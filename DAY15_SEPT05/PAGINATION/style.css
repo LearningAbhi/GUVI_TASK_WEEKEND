@@ -1,0 +1,91 @@
+h1
+{
+	text-align: center
+}
+
+.pContainer
+{
+	background-color: aqua;
+	margin-left: 10%;
+	margin-right: 20%;
+	margin-top:30px;
+}
+.itemContainer
+{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 40px;
+	background-color: antiquewhite;
+}
+table
+{
+width: 100%;
+border: 1PX solid black;
+
+}
+th{
+	border : 1px solid ;
+	font-weight: Bold;
+	font-size:25px;
+	background-color: seagreen
+ }
+td
+{
+	font-family: Arial, Helvetica, sans-serif;
+	border: 1px solid brown;
+	text-align: center;
+	padding:10px;
+}
+
+tr:nth-child(even) {background-color : aquamarine;}
+tr:nth-child(odd) {background-color: wheat }
+body {
+	background: #F3F3F3;
+}
+
+
+
+.itemContainer {
+	width: 100%;
+	max-width: 768px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	margin-top: 25px;
+}
+
+ 
+.indexNo {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.indexNo button {
+	width: 50px;
+	height: 50px;
+
+	appearance: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	background-color: #44AAEE;
+
+	margin: 5px;
+	transition: 0.4s;
+
+	color: #FFF;
+	font-size: 18px;
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.indexNo button:hover {
+	background-color: #44EEAA;
+}
+
+.indexNo button.active {
+	background-color: #44EEAA;
+	box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
