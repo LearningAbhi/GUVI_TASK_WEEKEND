@@ -1,0 +1,43 @@
+
+
+body{
+    background-color: #23404B;
+    color: burlywood;;;
+}
+.container{
+   width: 90%;
+    
+    margin-left: 10%;    
+}
+.heading
+{
+    text-align: center;
+
+}
+.image
+{
+    height: 150px;
+    width: 90%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cardList
+{
+    background-color: #54625C;
+    text-align: center;
+    height: 450px;
+}
+.headerList
+{
+    background-color: #000000;
+    text-align: center;
+    font-weight: bold;
+}
+p
+{
+    line-height: 8px;
+}
+button{
+    color: #54625C
+}
