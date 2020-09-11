@@ -84,7 +84,7 @@ function displayData(data)
 async function getWeather(countryData,card,header,body,image)
 {
     let key = "997134bae6ac1c21293c016f47979c30";
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${countryData.capital}&appid=${key}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${countryData.capital}&appid=${key}`;
     console.log(url)
     fetch(url)
     .then((resp) =>{
