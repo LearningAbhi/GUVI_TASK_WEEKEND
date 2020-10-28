@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Pet Shop</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    </body>
+    <script src="index.js"></script>
+    <script>
+        let mainDiv = document.createElement("div")
+        mainDiv.setAttribute("class", "container")
+        document.body.appendChild(mainDiv)
+
+        let row = document.createElement("div")
+        row.setAttribute("class", "row")
+        mainDiv.appendChild(row)
+
+        let col1 = document.createElement("div")
+        col1.setAttribute("class", "col-sm-12 col-md-3")
+        row.appendChild(col1)
+
+        let col2 = document.createElement("div")
+        col2.setAttribute("class", "col-sm-12 col-md-6")
+        col2.setAttribute("id", "mainColumn")
+        row.appendChild(col2)
+
+        let headingDiv = document.createElement("div")
+        headingDiv.setAttribute("class", "text-center")
+        col2.appendChild(headingDiv)
+
+        let heading = document.createElement("h1")
+        heading.innerText = "Pet Shop"
+        heading.setAttribute("class", "heading")
+        headingDiv.appendChild(heading)
+
+        let removeDiv = document.createElement("dic")
+        removeDiv.setAttribute("id", "removeId")
+        removeDiv.innerText = "This bwejbfigi"
+        col2.appendChild(removeDiv)
+        createButtons()
+
+        function createButtons(){
+            let node = document.getElementById("removeId")
+            node.remove()
+
+            let removeDiv = document.createElement("div")
+            removeDiv.setAttribute("id", "removeId")
+            col2.appendChild(removeDiv)
+
+            let addPetDiv = document.createElement("div")
+            removeDiv.appendChild(addPetDiv)
+
+            let addPetButton = document.createElement("button")
+            addPetButton.setAttribute("class", "btn btn-primary btn-lg btn-block bg-color")
+            addPetButton.setAttribute("id", "addPetsId")
+            addPetButton.innerText = "Add Pets"
+            addPetButton.setAttribute("onClick", "createAddpetForm()")
+            addPetButton.setAttribute("style", "margin-top:50px")
+            addPetDiv.appendChild(addPetButton)
+
+            let requestDiv = document.createElement("div")
+            removeDiv.appendChild(requestDiv)
+
+            let requestButton = document.createElement("button")
+            requestButton.setAttribute("class", "btn btn-primary btn-lg btn-block bg-color")
+            requestButton.setAttribute("id", "requestButtonId")
+            requestButton.innerText = "Request Pets"
+            requestButton.setAttribute("onClick", "requestPets()")
+            requestDiv.appendChild(requestButton)
+
+            let checkAvailability = document.createElement("div")
+            removeDiv.appendChild(checkAvailability)
+
+            let checkAvailButton = document.createElement("button")
+            checkAvailButton.setAttribute("class", "btn btn-primary btn-lg btn-block bg-color")
+            checkAvailButton.setAttribute("id", "checkAvailButtonId")
+            checkAvailButton.innerText = "Check Availability"
+            checkAvailButton.setAttribute("onClick", "checkAvailability()")
+            checkAvailability.appendChild(checkAvailButton)
+
+
+            let checkFivestatus = document.createElement("div")
+            removeDiv.appendChild(checkFivestatus)
+
+            let chekFiveButton = document.createElement("button")
+            chekFiveButton.setAttribute("class", "btn btn-primary btn-lg btn-block bg-color")
+            chekFiveButton.setAttribute("id", "chekFiveButtonId")
+            chekFiveButton.innerText = "First Request Status"
+            chekFiveButton.setAttribute("onClick", "checkFiveStatus()")
+            checkFivestatus.appendChild(chekFiveButton)
+
+
+            let checkStatus = document.createElement("div")
+            removeDiv.appendChild(checkStatus)
+
+            let checkStatusButton = document.createElement("button")
+            checkStatusButton.setAttribute("class", "btn btn-primary btn-lg btn-block bg-color")
+            checkStatusButton.setAttribute("id", "checkStatusButtonId")
+            checkStatusButton.innerText = "Check Request Status"
+            checkStatusButton.setAttribute("onClick", "checkAllStatus()")
+            checkStatus.appendChild(checkStatusButton)
+
+        }
+
+        function insertRequestData(){
+            let input = document.getElementById("requestPetId").value
+            document.getElementById("requestPetId").value = ""
+            let array = input.split(",")
+            requestObject.addRequest({requests:array, status:"Pending"})
+        }
+
+        function requestPets(){
+            let node = document.getElementById("removeId")
+            node.remove()
+
+            let removeDiv = document.createElement("div")
+            removeDiv.setAttribute("id", "removeId")
+            col2.appendChild(removeDiv)
+
+            let backButton = document.createElement("button")
+            backButton.setAttribute("class", "btn btn-primary bg-color")
+            backButton.setAttribute("type", "button")
+            backButton.innerText = "Back"
+            backButton.setAttribute("onclick", "createButtons()")
+            backButton.setAttribute("style", "margin-bottom:30px")
+            removeDiv.appendChild(backButton)
+
+            let inputDiv = document.createElement("input")
+            inputDiv.setAttribute("class", "form-control")
+            inputDiv.setAttribute("placeHolder", "Dog, Cat, Parrot")
+            inputDiv.setAttribute("id", "requestPetId")
+            removeDiv.appendChild(inputDiv)
+
+            let buttonDiv = document.createElement("div")
+            buttonDiv.setAttribute("class", "d-flex justify-content-center")
+            removeDiv.appendChild(buttonDiv)
+
+            let submitButton = document.createElement("button")
+            submitButton.setAttribute("class", "btn btn-primary bg-color")
+            submitButton.setAttribute("type", "submit")
+            submitButton.innerText = "Submit"
+            submitButton.setAttribute("onclick", "insertRequestData()")
+            buttonDiv.appendChild(submitButton)
+        }
+
+        function checkAvailability(){
+            let node = document.getElementById("removeId")
+            node.remove()
+
+            let removeDiv = document.createElement("div")
+            removeDiv.setAttribute("id", "removeId")
+            col2.appendChild(removeDiv)
+
+            let backButton = document.createElement("button")
+            backButton.setAttribute("class", "btn btn-primary bg-color")
+            backButton.setAttribute("type", "button")
+            backButton.innerText = "Back"
+            backButton.setAttribute("onclick", "createButtons()")
+            backButton.setAttribute("style", "margin-bottom:30px")
+            removeDiv.appendChild(backButton)
+
+            let table = document.createElement("table")
+            table.setAttribute("class", "table")
+            removeDiv.appendChild(table)
+
+            let tablehead = document.createElement("thead")
+            tablehead.setAttribute("class", "thead-light")
+            table.appendChild(tablehead)
+
+            let tr1 = document.createElement("tr")
+            tablehead.appendChild(tr1)
+
+            let th3 = document.createElement("th")
+            th3.setAttribute("scope", "col")
+            th3.innerText = "#"
+            tr1.appendChild(th3)
+
+            let th1 = document.createElement("th")
+            th1.setAttribute("scope", "col")
+            th1.setAttribute("class", "text-center")
+            th1.innerText = "Pet Type"
+            tr1.appendChild(th1)
+
+            let th2 = document.createElement("th")
+            th2.setAttribute("scope", "col")
+            th2.setAttribute("class", "text-center")
+            th2.innerText = "Available Number"
+            tr1.appendChild(th2)
+
+            let tableBody = document.createElement("tbody")
+            tableBody.setAttribute("id", "tableBodyId")
+            table.appendChild(tableBody)
+            createtableBody()
+
+        }
+
+        function createtableBody(){
+            tableBody = document.getElementById("tableBodyId")
+            let object = availabilityObject.getPetAvailibity()
+            let count = 1
+            for(let property in object){
+                let tr = document.createElement("tr")
+                tableBody.appendChild(tr)
+
+                let td1 = document.createElement("td")
+                td1.innerText = count
+                tr.appendChild(td1)
+
+                let td2 = document.createElement("td")
+                td2.setAttribute("class", "text-center")
+                td2.innerText = property
+                tr.appendChild(td2)
+
+                let td3 = document.createElement("td")
+                td3.setAttribute("class", "text-center")
+                td3.innerText = object[property]
+                tr.appendChild(td3)
+                count += 1
+            }
+        }
+
+        function checkAllStatus(){
+            let node = document.getElementById("removeId")
+            node.remove()
+
+            let removeDiv = document.createElement("div")
+            removeDiv.setAttribute("id", "removeId")
+            col2.appendChild(removeDiv)
+            
+            let backButton = document.createElement("button")
+            backButton.setAttribute("class", "btn btn-primary bg-color")
+            backButton.setAttribute("type", "button")
+            backButton.innerText = "Back"
+            backButton.setAttribute("onclick", "createButtons()")
+            backButton.setAttribute("style", "margin-bottom:30px")
+            removeDiv.appendChild(backButton)
+
+            let table = document.createElement("table")
+            table.setAttribute("class", "table")
+            removeDiv.appendChild(table)
+
+            let tablehead = document.createElement("thead")
+            tablehead.setAttribute("class", "thead-light")
+            table.appendChild(tablehead)
+
+            let tr1 = document.createElement("tr")
+            tablehead.appendChild(tr1)
+
+            let th3 = document.createElement("th")
+            th3.setAttribute("scope", "col")
+            th3.innerText = "#"
+            tr1.appendChild(th3)
+
+            let th1 = document.createElement("th")
+            th1.setAttribute("scope", "col")
+            th1.setAttribute("class", "text-center")
+            th1.innerText = "Requested Pets"
+            tr1.appendChild(th1)
+
+            let th2 = document.createElement("th")
+            th2.setAttribute("scope", "col")
+            th2.setAttribute("class", "text-center")
+            th2.innerText = "Status"
+            tr1.appendChild(th2)
+
+            let tableBody = document.createElement("tbody")
+            tableBody.setAttribute("id", "tableBody2Id")
+            table.appendChild(tableBody)
+            createtableBody2()
+
+        }
+
+        function createtableBody2(){
+            tableBody = document.getElementById("tableBody2Id")
+            //topFiveRequestStatus
+            let status = requestObject.allRequestStatus(availabilityObject)
+            let count = 1
+            for(let i=0; i<status.length; i++){
+                requestArray = status[i].requests
+                let requestPets = ""
+                for (let j=0; j<requestArray.length; j++){
+                    if (j == requestArray.length - 1){
+                        requestPets += requestArray[j]
+                    }
+                    else{
+                        requestPets += requestArray[j] + ", "
+                    }
+                }
+                let tr = document.createElement("tr")
+                tableBody.appendChild(tr)
+
+                let td1 = document.createElement("td")
+                td1.innerText = count
+                tr.appendChild(td1)
+
+                let td2 = document.createElement("td")
+                td2.setAttribute("class", "text-center")
+                td2.innerText = requestPets
+                tr.appendChild(td2)
+
+                let td3 = document.createElement("td")
+                td3.setAttribute("class", "text-center")
+                td3.innerText = status[i].status
+                tr.appendChild(td3)
+                count += 1
+            }
+        }
+
+        function createtableBody3(){
+            tableBody = document.getElementById("tableBody3Id")
+            //topFiveRequestStatus
+            let status = requestObject.topFiveRequestStatus(availabilityObject)
+            let count = 1
+            for(let i=0; i<status.length; i++){
+                requestArray = status[i].requests
+                let requestPets = ""
+                for (let j=0; j<requestArray.length; j++){
+                    if (j == requestArray.length - 1){
+                        requestPets += requestArray[j]
+                    }
+                    else{
+                        requestPets += requestArray[j] + ", "
+                    }
+                }
+                let tr = document.createElement("tr")
+                tableBody.appendChild(tr)
+
+                let td1 = document.createElement("td")
+                td1.innerText = count
+                tr.appendChild(td1)
+
+                let td2 = document.createElement("td")
+                td2.setAttribute("class", "text-center")
+                td2.innerText = requestPets
+                tr.appendChild(td2)
+
+                let td3 = document.createElement("td")
+                td3.setAttribute("class", "text-center")
+                td3.innerText = status[i].status
+                tr.appendChild(td3)
+                count += 1
+            }
+        }
+
+
+        
+        function checkFiveStatus(){
+            let node = document.getElementById("removeId")
+            node.remove()
+
+            let removeDiv = document.createElement("div")
+            removeDiv.setAttribute("id", "removeId")
+            col2.appendChild(removeDiv)
+
+            let backButton = document.createElement("button")
+            backButton.setAttribute("class", "btn btn-primary bg-color")
+            backButton.setAttribute("type", "button")
+            backButton.innerText = "Back"
+            backButton.setAttribute("onclick", "createButtons()")
+            backButton.setAttribute("style", "margin-bottom:30px")
+            removeDiv.appendChild(backButton)
+
+            let table = document.createElement("table")
+            table.setAttribute("class", "table")
+            removeDiv.appendChild(table)
+
+            let tablehead = document.createElement("thead")
+            tablehead.setAttribute("class", "thead-light")
+            table.appendChild(tablehead)
+
+            let tr1 = document.createElement("tr")
+            tablehead.appendChild(tr1)
+
+            let th3 = document.createElement("th")
+            th3.setAttribute("scope", "col")
+            th3.innerText = "#"
+            tr1.appendChild(th3)
+
+            let th1 = document.createElement("th")
+            th1.setAttribute("scope", "col")
+            th1.setAttribute("class", "text-center")
+            th1.innerText = "Requested Pets"
+            tr1.appendChild(th1)
+
+            let th2 = document.createElement("th")
+            th2.setAttribute("scope", "col")
+            th2.setAttribute("class", "text-center")
+            th2.innerText = "Status"
+            tr1.appendChild(th2)
+
+            let tableBody = document.createElement("tbody")
+            tableBody.setAttribute("id", "tableBody3Id")
+            table.appendChild(tableBody)
+            createtableBody3()
+
+
+        }
+
+        function createAddpetForm(){
+            let node = document.getElementById("removeId")
+            node.remove()
+
+            let removeDiv = document.createElement("div")
+            removeDiv.setAttribute("id", "removeId")
+            col2.appendChild(removeDiv)
+
+            let backButton = document.createElement("button")
+            backButton.setAttribute("class", "btn btn-primary bg-color")
+            backButton.setAttribute("type", "button")
+            backButton.setAttribute("style", "margin-bottom:30px")
+            backButton.innerText = "Back"
+            backButton.setAttribute("onclick", "createButtons()")
+            removeDiv.appendChild(backButton)
+
+            let petType = document.createElement("div")
+            petType.setAttribute("class", "form-group")
+            removeDiv.appendChild(petType)
+
+            let labelType = document.createElement("label")
+            labelType.setAttribute("for", "petTypeId")
+            labelType.innerText = "Pet Type"
+            petType.appendChild(labelType)
+
+            let inputType = document.createElement("input")
+            inputType.setAttribute("type", "text")
+            inputType.setAttribute("class", "form-control")
+            inputType.setAttribute("id", "petTypeId")
+            inputType.setAttribute("placeholder", "Pet Type")
+            inputType.required = true
+            petType.appendChild(inputType)
+
+            let petColor = document.createElement("div")
+            petColor.setAttribute("class", "form-group")
+            removeDiv.appendChild(petColor)
+
+            let labelColor = document.createElement("label")
+            labelColor.setAttribute("for", "petColorId")
+            labelColor.innerText = "Pet Color"
+            petColor.appendChild(labelColor)
+
+            let inputColor = document.createElement("input")
+            inputColor.setAttribute("type", "text")
+            inputColor.setAttribute("class", "form-control")
+            inputColor.setAttribute("id", "petColorId")
+            inputColor.setAttribute("placeholder", "Pet Color")
+            inputColor.required = true
+            petColor.appendChild(inputColor)
+
+
+            let petAge = document.createElement("div")
+            petAge.setAttribute("class", "form-group")
+            removeDiv.appendChild(petAge)
+
+            let labelAge = document.createElement("label")
+            labelAge.setAttribute("for", "petAgeId")
+            labelAge.innerText = "Age"
+            petAge.appendChild(labelAge)
+
+            let inputAge = document.createElement("input")
+            inputAge.setAttribute("type", "number")
+            inputAge.setAttribute("class", "form-control")
+            inputAge.setAttribute("id", "petAgeId")
+            inputAge.setAttribute("placeholder", "Pet Age")
+            inputAge.required = true
+            petAge.appendChild(inputAge)
+
+            let petBreed = document.createElement("div")
+            petBreed.setAttribute("class", "form-group")
+            removeDiv.appendChild(petBreed)
+
+            let labelBreed = document.createElement("label")
+            labelBreed.setAttribute("for", "petBreedId")
+            labelBreed.innerText = "Pet Breed"
+            petBreed.appendChild(labelBreed)
+
+            let inputBreed = document.createElement("input")
+            inputBreed.setAttribute("type", "text")
+            inputBreed.setAttribute("class", "form-control")
+            inputBreed.setAttribute("id", "petBreedId")
+            inputBreed.setAttribute("placeholder", "Pet Breed")
+            petBreed.appendChild(inputBreed)
+
+            let buttonDiv = document.createElement("div")
+            buttonDiv.setAttribute("class", "d-flex justify-content-center")
+            removeDiv.appendChild(buttonDiv)
+
+            let submitButton = document.createElement("button")
+            submitButton.setAttribute("class", "btn btn-primary bg-color")
+            submitButton.setAttribute("type", "submit")
+            submitButton.innerText = "Submit"
+            submitButton.setAttribute("onclick", "insertPetData()")
+            buttonDiv.appendChild(submitButton)
+
+        }
+
+        function insertPetData(){
+            let petType = document.getElementById("petTypeId").value
+            document.getElementById("petTypeId").value = ""
+            let petColor = document.getElementById("petColorId").value
+            document.getElementById("petColorId").value = ""
+            let petAge = document.getElementById("petAgeId").value
+            document.getElementById("petAgeId").value = ""
+            let petBreed = document.getElementById("petBreedId").value
+            document.getElementById("petBreedId").value = ""
+            if (petBreed === ""){
+                availabilityObject.addPets({type: petType, color:petColor, age:petAge})
+            }
+            else{
+                availabilityObject.addPets({type: petType, color:petColor, age:petAge, breed:petBreed })
+            }
+        }
+
+
+    </script>
+</html>

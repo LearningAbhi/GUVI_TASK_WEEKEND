@@ -1,0 +1,49 @@
+.heading{
+    margin-top: 5%;
+    color: blueviolet;
+}
+ 
+.bg-color{
+    background-color:blueviolet;
+    margin-top: 10px;
+    border-color: blueviolet;
+}
+
+.bg-color:hover{
+    background-color: rgb(112, 73, 148);
+}
+
+.background{
+    background-image: linear-gradient(to right , rgb(230, 185, 134), rgb(196, 130, 106));
+}
+
+.high-scores{
+    height: 200px;
+    overflow: auto;
+    color: rgb(9, 66, 112)
+}
+
+.margin-table{
+    margin-top: 20%;
+}
+
+
+.choice-text{
+    font-family: sans-serif;
+}
+
+.td-class{
+    color: blueviolet;
+    font-weight: bolder;
+    font-size: 20px;
+
+}
+
+span{
+    font-weight: bolder;
+    margin-right: 20px;
+}
+
+.background-progress{
+    background-color: blueviolet;
+}
